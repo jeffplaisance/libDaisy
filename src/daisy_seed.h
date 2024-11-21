@@ -97,6 +97,8 @@ class DaisySeed
     /** Returns the rate in Hz that the Audio callback is called */
     float AudioCallbackRate() const;
 
+    void SetIntermediateBuffers(int32_t* buffer_sai1, int32_t* buffer_sai2 = nullptr);
+
     /** Returns the SAI Handle for the Daisy Seed 
      *  This can be useful when adding a secondary codec,
      *  the result of this function can be passed to the audio reinit 

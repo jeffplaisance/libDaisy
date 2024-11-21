@@ -235,6 +235,11 @@ float DaisySeed::AudioCallbackRate() const
     return callback_rate_;
 }
 
+void DaisySeed::SetIntermediateBuffers(int32_t* buffer_sai1, int32_t* buffer_sai2)
+{
+    audio_handle.SetIntermediateBuffers(buffer_sai1, buffer_sai2);
+}
+
 void DaisySeed::SetLed(bool state)
 {
     dsy_gpio_write(&led, state);
